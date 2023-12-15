@@ -1,5 +1,5 @@
-import { getLineFromNumber } from '@/server/journeys/lineNumberMapping';
-import type { Common, ParsedProduct, ProdL } from '@/types/HAFAS';
+import { getLineFromNumber } from '#/server/journeys/lineNumberMapping.js';
+import type { Common, ParsedProduct, ProdL } from '#/types/HAFAS/index.js';
 
 export default (product: ProdL, common: Common): ParsedProduct => {
   const operator =

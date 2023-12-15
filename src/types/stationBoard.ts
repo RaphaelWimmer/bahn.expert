@@ -3,8 +3,8 @@ import type {
   HafasStation,
   ParsedProduct,
   RemL,
-} from './HAFAS';
-import type { RouteStop } from '@/types/routing';
+} from './HAFAS/index.js';
+import type { RouteStop } from '#/types/routing.js';
 
 interface CommonStationBoardEntry {
   train: ParsedProduct;

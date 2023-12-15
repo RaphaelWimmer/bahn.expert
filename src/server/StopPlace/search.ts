@@ -1,15 +1,24 @@
-import { byEva, byName, byRl100, groups, keys } from '@/external/risStations';
-import { Cache, CacheDatabase } from '@/server/cache';
-import { getSingleStation } from '@/server/iris/station';
-import { manualNameOverrides } from '@/server/StopPlace/manualNameOverrides';
-import { searchWithHafas } from '@/server/StopPlace/hafasSearch';
-import { StopPlaceKeyType } from '@/external/types';
-import type { GroupedStopPlace, StopPlaceIdentifier } from '@/types/stopPlace';
+import {
+  byEva,
+  byName,
+  byRl100,
+  groups,
+  keys,
+} from '#/server/external/risStations.js';
+import { Cache, CacheDatabase } from '#/server/cache.js';
+import { getSingleStation } from '#/server/iris/station.js';
+import { manualNameOverrides } from '#/server/StopPlace/manualNameOverrides.js';
+import { searchWithHafas } from '#/server/StopPlace/hafasSearch.js';
+import { StopPlaceKeyType } from '#/server/external/types.js';
+import type {
+  GroupedStopPlace,
+  StopPlaceIdentifier,
+} from '#/types/stopPlace.js';
 import type {
   ResolvedStopPlaceGroups,
   StopPlace,
   StopPlaceSearchResult,
-} from '@/external/types';
+} from '#/server/external/types.js';
 
 const stopPlaceStationSearchCache = new Cache<GroupedStopPlace[]>(
   CacheDatabase.StopPlaceSearch,

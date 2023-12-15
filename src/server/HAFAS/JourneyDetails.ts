@@ -1,19 +1,19 @@
-import { adjustProductOperator } from '@/server/HAFAS/helper/adjustProductOperator';
+import { adjustProductOperator } from '#/server/HAFAS/helper/adjustProductOperator.js';
 import { parse } from 'date-fns';
-import makeRequest from './Request';
-import parseAuslastung from './helper/parseAuslastung';
-import parseMessages from './helper/parseMessages';
-import parseStop from './helper/parseStop';
+import makeRequest from './Request.js';
+import parseAuslastung from './helper/parseAuslastung.js';
+import parseMessages from './helper/parseMessages.js';
+import parseStop from './helper/parseStop.js';
 import type {
   AllowedHafasProfile,
   HafasResponse,
   ParsedCommon,
-} from '@/types/HAFAS';
+} from '#/types/HAFAS/index.js';
 import type {
   JourneyDetailsRequest,
   JourneyDetailsResponse,
   ParsedJourneyDetails,
-} from '@/types/HAFAS/JourneyDetails';
+} from '#/types/HAFAS/JourneyDetails.js';
 
 export const parseJourneyDetails = (
   d: HafasResponse<JourneyDetailsResponse>,

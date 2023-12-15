@@ -1,6 +1,6 @@
-import { Cache, CacheDatabase } from '@/server/cache';
-import { sbbAxios } from '@/server/sbb/sbbAxios';
-import type { MinimalStopPlace } from '@/types/stopPlace';
+import { Cache, CacheDatabase } from '#/server/cache.js';
+import { sbbAxios } from '#/server/sbb/sbbAxios.js';
+import type { MinimalStopPlace } from '#/types/stopPlace.js';
 
 const sbbStopPlaceCache = new Cache(CacheDatabase.SBBStopPlaces);
 

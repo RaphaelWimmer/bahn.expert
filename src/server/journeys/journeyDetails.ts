@@ -1,4 +1,4 @@
-import { calculateCurrentStopPlace } from '@/server/HAFAS/Detail';
+import { calculateCurrentStopPlace } from '#/server/HAFAS/Detail.js';
 import {
   compareDesc,
   differenceInMinutes,
@@ -8,17 +8,20 @@ import {
   subHours,
   subMinutes,
 } from 'date-fns';
-import { EventType, TimeType } from '@/external/generated/risJourneys';
-import { getAbfahrten } from '@/server/iris';
-import { getJourneyDetails } from '@/external/risJourneys';
-import { getLineFromNumber } from '@/server/journeys/lineNumberMapping';
+import {
+  EventType,
+  TimeType,
+} from '#/server/external/generated/risJourneys/index.js';
+import { getAbfahrten } from '#/server/iris/index.js';
+import { getJourneyDetails } from '#/server/external/risJourneys.js';
+import { getLineFromNumber } from '#/server/journeys/lineNumberMapping.js';
 import type {
   ArrivalDepartureEvent,
   TransportPublicDestinationPortionWorking,
-} from '@/external/generated/risJourneys';
-import type { CommonStopInfo } from '@/types/HAFAS';
-import type { ParsedSearchOnTripResponse } from '@/types/HAFAS/SearchOnTrip';
-import type { RouteStop } from '@/types/routing';
+} from '#/server/external/generated/risJourneys/index.js';
+import type { CommonStopInfo } from '#/types/HAFAS/index.js';
+import type { ParsedSearchOnTripResponse } from '#/types/HAFAS/SearchOnTrip.js';
+import type { RouteStop } from '#/types/routing.js';
 
 const trainNumberRegex = /(.*?)(\d+).*/;
 

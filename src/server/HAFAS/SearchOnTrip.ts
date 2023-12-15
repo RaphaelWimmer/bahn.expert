@@ -1,15 +1,15 @@
-import { Journey } from './TripSearch/parse';
-import makeRequest from './Request';
+import { Journey } from './TripSearch/parse.js';
+import makeRequest from './Request.js';
 import type {
   AllowedHafasProfile,
   HafasResponse,
   ParsedCommon,
-} from '@/types/HAFAS';
+} from '#/types/HAFAS/index.js';
 import type {
   SearchOnTripRequest,
   SearchOnTripResponse,
-} from '@/types/HAFAS/SearchOnTrip';
-import type { SingleRoute } from '@/types/routing';
+} from '#/types/HAFAS/SearchOnTrip.js';
+import type { SingleRoute } from '#/types/routing.js';
 
 const parseSearchOnTrip = (
   d: HafasResponse<SearchOnTripResponse>,

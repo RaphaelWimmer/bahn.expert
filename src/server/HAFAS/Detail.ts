@@ -1,14 +1,14 @@
-import { addIrisMessagesToDetails } from '@/server/journeys/journeyDetails';
-import { AllowedHafasProfile } from '@/types/HAFAS';
+import { addIrisMessagesToDetails } from '#/server/journeys/journeyDetails.js';
+import { AllowedHafasProfile } from '#/types/HAFAS/index.js';
 import { isAfter } from 'date-fns';
-import createCtxRecon from '@/server/HAFAS/helper/createCtxRecon';
-import JourneyDetails from '@/server/HAFAS/JourneyDetails';
-import JourneyMatch from '@/server/HAFAS/JourneyMatch';
-import searchOnTrip from './SearchOnTrip';
-import type { JourneyFilter } from '@/types/HAFAS';
-import type { ParsedJourneyMatchResponse } from '@/types/HAFAS/JourneyMatch';
-import type { ParsedSearchOnTripResponse } from '@/types/HAFAS/SearchOnTrip';
-import type { RouteJourneySegmentTrain, RouteStop } from '@/types/routing';
+import createCtxRecon from '#/server/HAFAS/helper/createCtxRecon.js';
+import JourneyDetails from '#/server/HAFAS/JourneyDetails.js';
+import JourneyMatch from '#/server/HAFAS/JourneyMatch.js';
+import searchOnTrip from './SearchOnTrip.js';
+import type { JourneyFilter } from '#/types/HAFAS/index.js';
+import type { ParsedJourneyMatchResponse } from '#/types/HAFAS/JourneyMatch.js';
+import type { ParsedSearchOnTripResponse } from '#/types/HAFAS/SearchOnTrip.js';
+import type { RouteJourneySegmentTrain, RouteStop } from '#/types/routing.js';
 
 export function calculateCurrentStopPlace(
   segment: ParsedSearchOnTripResponse,

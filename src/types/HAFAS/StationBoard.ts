@@ -6,7 +6,7 @@ import type {
   GenericHafasRequest,
   JourneyFilter,
   OptionalLocL,
-} from '.';
+} from './index.js';
 
 export const enum StationBoardSortType {
   EVAID = 'EVAID',

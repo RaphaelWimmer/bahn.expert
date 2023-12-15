@@ -1,6 +1,6 @@
-import { enrichCoachSequence } from '@/server/coachSequence/commonMapping';
-import { getLineFromNumber } from '@/server/journeys/lineNumberMapping';
-import { logger } from '@/server/logger';
+import { enrichCoachSequence } from '#/server/coachSequence/commonMapping.js';
+import { getLineFromNumber } from '#/server/journeys/lineNumberMapping.js';
+import { logger } from '#/server/logger/index.js';
 import type {
   BaseFahrzeug,
   BaseFahrzeuggruppe,
@@ -10,7 +10,7 @@ import type {
   Position,
   Sektor,
   Wagenreihung,
-} from '@/types/reihung';
+} from '#/types/reihung.js';
 import type {
   CoachSequence,
   CoachSequenceCoach,
@@ -21,8 +21,8 @@ import type {
   CoachSequenceProduct,
   CoachSequenceSector,
   CoachSequenceStop,
-} from '@/types/coachSequence';
-import type { VehicleCategory } from '@/external/generated/coachSequence';
+} from '#/types/coachSequence.js';
+import type { VehicleCategory } from '#/server/external/generated/coachSequence/index.js';
 
 const mapClass = (category: VehicleCategory) => {
   switch (category) {

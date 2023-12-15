@@ -1,5 +1,5 @@
 {
-  "entryFile": "./src/server/API/index.ts",
+  "entryFile": "./src/server/app.ts",
   "controllerPathGlobs": ["./src/server/API/controller/**"],
   "noImplicitAdditionalProperties": "ignore",
   "spec": {
@@ -30,11 +30,12 @@
   "routes": {
     "middleware": "koa",
     "routesDir": "./src/server/API",
-    "basePath": "api/"
+    "basePath": "api/",
+    "esm": true
   },
   "compilerOptions": {
     "paths": {
-      "@/*": ["./src/*"]
+      "#/*": ["./src/*"]
     }
   }
 }

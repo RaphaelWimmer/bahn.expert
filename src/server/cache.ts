@@ -1,8 +1,7 @@
-import { checkSecrets } from '@/server/checkSecret';
-import { logger } from '@/server/logger';
+import { logger } from '#/server/logger/index.js';
 import { LRUCache } from 'lru-cache';
 import { Temporal } from '@js-temporal/polyfill';
-import Redis from 'ioredis';
+import { Redis } from 'ioredis';
 import v8 from 'node:v8';
 
 export function parseCacheTTL(
@@ -36,8 +35,6 @@ function dateDeserialze(_key: string, value: any): any {
   }
   return value;
 }
-
-checkSecrets(process.env.REDIS_HOST);
 
 const redisSettings =
   process.env.REDIS_HOST && process.env.NODE_ENV !== 'test'

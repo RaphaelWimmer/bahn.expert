@@ -1,9 +1,9 @@
-import { AuslastungsValue } from '@/types/routing';
-import { getJourneyDetails } from '@/server/sbb/journeyDetails';
-import { getSingleJourneyTrip } from '@/server/sbb/trip';
-import type { EvaNumber } from '@/types/common';
-import type { MinimalStopPlace } from '@/types/stopPlace';
-import type { RouteAuslastung } from '@/types/routing';
+import { AuslastungsValue } from '#/types/routing.js';
+import { getJourneyDetails } from '#/server/sbb/journeyDetails.js';
+import { getSingleJourneyTrip } from '#/server/sbb/trip.js';
+import type { EvaNumber } from '#/types/common.js';
+import type { MinimalStopPlace } from '#/types/stopPlace.js';
+import type { RouteAuslastung } from '#/types/routing.js';
 
 async function findJourneyId(
   start: Omit<MinimalStopPlace, 'ril100'>,

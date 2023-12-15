@@ -1,18 +1,18 @@
-import { AllowedHafasProfile } from '@/types/HAFAS';
-import { Cache, CacheDatabase } from '@/server/cache';
+import { AllowedHafasProfile } from '#/types/HAFAS/index.js';
+import { Cache, CacheDatabase } from '#/server/cache.js';
 import { format, parse, subDays } from 'date-fns';
-import JourneyDetails from '@/server/HAFAS/JourneyDetails';
-import makeRequest, { HafasError } from './Request';
-import parseMessages from './helper/parseMessages';
-import parseStop from './helper/parseStop';
+import JourneyDetails from '#/server/HAFAS/JourneyDetails.js';
+import makeRequest, { HafasError } from './Request.js';
+import parseMessages from './helper/parseMessages.js';
+import parseStop from './helper/parseStop.js';
 import type {
   EnrichedJourneyMatchOptions,
   JourneyMatchOptions,
   JourneyMatchRequest,
   JourneyMatchResponse,
   ParsedJourneyMatchResponse,
-} from '@/types/HAFAS/JourneyMatch';
-import type { HafasResponse, ParsedCommon } from '@/types/HAFAS';
+} from '#/types/HAFAS/JourneyMatch.js';
+import type { HafasResponse, ParsedCommon } from '#/types/HAFAS/index.js';
 
 const journeyMatchCache = new Cache<ParsedJourneyMatchResponse[]>(
   CacheDatabase.HAFASJourneyMatch,

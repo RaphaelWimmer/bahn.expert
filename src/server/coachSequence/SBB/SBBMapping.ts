@@ -1,14 +1,14 @@
-import { enrichCoachSequence } from '@/server/coachSequence/commonMapping';
-import { mapSBBOccupancy } from '@/server/sbb/occupancy';
+import { enrichCoachSequence } from '#/server/coachSequence/commonMapping.js';
+import { mapSBBOccupancy } from '#/server/sbb/occupancy.js';
 import type {
   CoachSequenceCoach,
   CoachSequenceInformation,
   CoachSequenceSector,
-} from '@/types/coachSequence';
+} from '#/types/coachSequence.js';
 import type {
   SBBCoachSequenceCoach,
   SBBCoachSequenceWithTrip,
-} from '@/server/sbb/types';
+} from '#/server/sbb/types.js';
 
 function mapSectors(sectorNames: string[]): CoachSequenceSector[] {
   const sectors: CoachSequenceSector[] = [];

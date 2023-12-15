@@ -4,11 +4,11 @@ import type {
   ParsedProduct,
   ProdL,
   RemL,
-} from './HAFAS';
-import type { Message } from './iris';
-import type { MinimalStopPlace } from '@/types/stopPlace';
-import type { SecL } from './HAFAS/TripSearch';
-import type { TransportPublicDestinationPortionWorking } from '@/external/generated/risJourneys';
+} from './HAFAS/index.js';
+import type { Message } from './iris.js';
+import type { MinimalStopPlace } from '#/types/stopPlace.js';
+import type { SecL } from './HAFAS/TripSearch.js';
+import type { TransportPublicDestinationPortionWorking } from '#/server/external/generated/risJourneys/index.js';
 
 export interface RouteStop {
   arrival?: CommonStopInfo;

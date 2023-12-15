@@ -1,10 +1,10 @@
-import { calculateVia } from '@/server/iris/helper';
-import type { Abfahrt } from '@/types/iris';
+import { calculateVia } from '#/server/iris/helper.js';
+import type { Abfahrt } from '#/types/iris.js';
 import type {
   ArrivalStationBoardEntry,
   DepartureStationBoardEntry,
-} from '@/types/stationBoard';
-import type { RouteStop } from '@/types/routing';
+} from '#/types/stationBoard.js';
+import type { RouteStop } from '#/types/routing.js';
 
 export type MappedHafasArrivals = Record<
   string,

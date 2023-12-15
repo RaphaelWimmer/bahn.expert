@@ -1,8 +1,8 @@
 import type {
   CoachSequenceBaureihe,
   CoachSequenceProduct,
-} from '@/types/coachSequence';
-import type { MinimalStopPlace } from '@/types/stopPlace';
+} from '#/types/coachSequence.js';
+import type { MinimalStopPlace } from '#/types/stopPlace.js';
 
 export interface TrainRunStop extends MinimalStopPlace {
   arrivalTime?: Date;

@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       environment:
-        description: 'where to deploy to? beta or production'
+        description: 'where to deploy to? beta, production or next'
         required: true
         default: production
 

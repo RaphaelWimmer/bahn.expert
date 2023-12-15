@@ -4,12 +4,12 @@ import {
   isWithinInterval,
   subDays,
 } from 'date-fns';
-import { DBCoachSequence } from '@/server/coachSequence/DB';
-import { newDBCoachSequence } from '@/server/coachSequence/newDB';
-import { OEBBCoachSequence } from '@/server/coachSequence/OEBB';
-import { SBBCoachSequence } from '@/server/coachSequence/SBB';
-import type { CoachSequenceInformation } from '@/types/coachSequence';
-import type { EvaNumber } from '@/types/common';
+import { DBCoachSequence } from '#/server/coachSequence/DB/index.js';
+import { newDBCoachSequence } from '#/server/coachSequence/newDB/index.js';
+import { OEBBCoachSequence } from '#/server/coachSequence/OEBB/index.js';
+import { SBBCoachSequence } from '#/server/coachSequence/SBB/index.js';
+import type { CoachSequenceInformation } from '#/types/coachSequence.js';
+import type { EvaNumber } from '#/types/common.js';
 
 export async function coachSequence(
   trainNumber: string,

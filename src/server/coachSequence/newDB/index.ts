@@ -1,6 +1,6 @@
-import { getDepartureSequence } from '@/external/coachSequence';
-import { mapInformation } from '@/server/coachSequence/newDB/newDBMapping';
-import type { CoachSequenceInformation } from '@/types/coachSequence';
+import { getDepartureSequence } from '#/server/external/coachSequence.js';
+import { mapInformation } from '#/server/coachSequence/newDB/newDBMapping.js';
+import type { CoachSequenceInformation } from '#/types/coachSequence.js';
 
 const isDisabled = process.env.COACH_SEQUENCE_DISABLED
   ? JSON.parse(process.env.COACH_SEQUENCE_DISABLED)

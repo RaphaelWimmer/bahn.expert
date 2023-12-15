@@ -1,5 +1,5 @@
-import { Cache, CacheDatabase } from '@/server/cache';
-import { getStopPlaceByEva } from '@/server/StopPlace/search';
+import { Cache, CacheDatabase } from '#/server/cache.js';
+import { getStopPlaceByEva } from '#/server/StopPlace/search.js';
 import Axios from 'axios';
 
 const cache = new Cache<string | null>(CacheDatabase.DBLageplan);

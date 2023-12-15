@@ -2,16 +2,16 @@ import {
   addUseragent,
   randomBahnhofLiveUseragent,
   randomDBNavigatorUseragent,
-} from '@/external/randomUseragent';
-import { Cache, CacheDatabase } from '@/server/cache';
+} from '#/server/external/randomUseragent.js';
+import { Cache, CacheDatabase } from '#/server/cache.js';
 import { format } from 'date-fns';
-import { isWithin20Hours } from '@/external/coachSequence';
-import { mapInformation } from '@/server/coachSequence/DB/DBMapping';
-import { UpstreamApiRequestMetric } from '@/server/admin';
+import { isWithin20Hours } from '#/server/external/coachSequence.js';
+import { mapInformation } from '#/server/coachSequence/DB/DBMapping.js';
+import { UpstreamApiRequestMetric } from '#/server/admin/index.js';
 import { utcToZonedTime } from 'date-fns-tz';
 import Axios from 'axios';
-import type { CoachSequenceInformation } from '@/types/coachSequence';
-import type { Wagenreihung } from '@/types/reihung';
+import type { CoachSequenceInformation } from '#/types/coachSequence.js';
+import type { Wagenreihung } from '#/types/reihung.js';
 
 const dbCoachSequenceUrls = {
   apps: 'https://www.apps-bahn.de/wr/wagenreihung/1.0',

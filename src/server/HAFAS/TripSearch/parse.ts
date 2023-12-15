@@ -1,34 +1,34 @@
-import { adjustProductOperator } from '@/server/HAFAS/helper/adjustProductOperator';
+import { adjustProductOperator } from '#/server/HAFAS/helper/adjustProductOperator.js';
 import { differenceInMilliseconds, parse } from 'date-fns';
-import mergeSegments from '@/server/HAFAS/TripSearch/mergeSegments';
-import parseAuslastung from '../helper/parseAuslastung';
-import parseCommonArrival from '../helper/parseCommonArrival';
-import parseCommonDeparture from '../helper/parseCommonDeparture';
-import parseDuration from '../helper/parseDuration';
-import parseMessages from '../helper/parseMessages';
-import parseStop from '../helper/parseStop';
-import parseTarif from '@/server/HAFAS/helper/parseTarif';
+import mergeSegments from '#/server/HAFAS/TripSearch/mergeSegments.js';
+import parseAuslastung from '../helper/parseAuslastung.js';
+import parseCommonArrival from '../helper/parseCommonArrival.js';
+import parseCommonDeparture from '../helper/parseCommonDeparture.js';
+import parseDuration from '../helper/parseDuration.js';
+import parseMessages from '../helper/parseMessages.js';
+import parseStop from '../helper/parseStop.js';
+import parseTarif from '#/server/HAFAS/helper/parseTarif.js';
 import type {
   CommonStop,
   CommonStopInfo,
   HafasResponse,
   ParsedCommon,
   ParsedProduct,
-} from '@/types/HAFAS';
+} from '#/types/HAFAS/index.js';
 import type {
   Jny,
   OutConL,
   SecL,
   TripSearchResponse,
-} from '@/types/HAFAS/TripSearch';
-import type { MinimalStopPlace } from '@/types/stopPlace';
+} from '#/types/HAFAS/TripSearch.js';
+import type { MinimalStopPlace } from '#/types/stopPlace.js';
 import type {
   RouteJourney,
   RouteJourneySegment,
   RouteStop,
   RoutingResult,
   SingleRoute,
-} from '@/types/routing';
+} from '#/types/routing.js';
 
 const nameRegex = /O=([^@]+)/;
 const evaRegex = /L=(\d+)/;

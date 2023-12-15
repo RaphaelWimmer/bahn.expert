@@ -1,33 +1,20 @@
 {
   "$schema": "https://json.schemastore.org/swcrc",
   "module": {
-    "type": "commonjs"
+    "type": "es6",
+    "resolveFully": true
   },
   "env": {
     "targets": {
-      "node": "20"
+      "node": "21"
     }
   },
   "jsc": {
+    "experimental": {
+      "plugins": []
+    },
     "externalHelpers": true,
     "loose": true,
-    "experimental": {
-      "plugins": [
-        ["@swc/plugin-emotion", {}],
-        [
-          "@swc/plugin-transform-imports",
-          {
-            "@mui/material": {
-              "transform": "@mui/material/{{member}}"
-            },
-            "@mui/icons-material": {
-              "transform": "@mui/icons-material/{{member}}"
-            }
-          }
-        ],
-        ["@swc/plugin-loadable-components", {}]
-      ]
-    },
     "parser": {
       "syntax": "typescript",
       "tsx": true,
@@ -35,15 +22,13 @@
       "dynamicImport": true
     },
     "transform": {
-      "decoratorMetadata": true,
-      "react": {
-        "runtime": "automatic",
-        "importSource": "@emotion/react"
-      }
+      "decoratorMetadata": true
     },
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "#/*": [
+        "src/*"
+      ]
     }
   }
 }

@@ -1,4 +1,4 @@
-import { AuslastungsValue } from '@/types/routing';
+import { AuslastungsValue } from '#/types/routing.js';
 import {
   Controller,
   Get,
@@ -10,22 +10,22 @@ import {
   Route,
   Tags,
 } from '@tsoa/runtime';
-import { getLageplan } from '@/server/StopPlace/Lageplan';
+import { getLageplan } from '#/server/StopPlace/Lageplan/index.js';
 import {
   getStopPlaceByEva,
   getStopPlaceByRl100,
   searchStopPlace,
-} from '@/server/StopPlace/search';
+} from '#/server/StopPlace/search.js';
 import axios from 'axios';
-import type { EvaNumber } from '@/types/common';
+import type { EvaNumber } from '#/types/common.js';
 import type {
   GroupedStopPlace,
   TrainOccupancy,
   TrainOccupancyList,
   VRRTrainOccupancy,
   VRRTrainOccupancyValues,
-} from '@/types/stopPlace';
-import type { LageplanResponse } from '@/types/bahnhof';
+} from '#/types/stopPlace.js';
+import type { LageplanResponse } from '#/types/bahnhof.js';
 import type { TsoaResponse } from '@tsoa/runtime';
 
 @Route('/stopPlace/v1')

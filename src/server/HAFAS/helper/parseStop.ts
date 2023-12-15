@@ -1,9 +1,13 @@
-import parseAuslastung from './parseAuslastung';
-import parseCommonArrival from './parseCommonArrival';
-import parseCommonDeparture from './parseCommonDeparture';
-import parseMessages from './parseMessages';
-import type { CommonStop, ParsedCommon, ParsedProduct } from '@/types/HAFAS';
-import type { RouteStop } from '@/types/routing';
+import parseAuslastung from './parseAuslastung.js';
+import parseCommonArrival from './parseCommonArrival.js';
+import parseCommonDeparture from './parseCommonDeparture.js';
+import parseMessages from './parseMessages.js';
+import type {
+  CommonStop,
+  ParsedCommon,
+  ParsedProduct,
+} from '#/types/HAFAS/index.js';
+import type { RouteStop } from '#/types/routing.js';
 
 export default (
   stop: CommonStop,

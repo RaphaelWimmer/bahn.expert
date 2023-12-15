@@ -1,5 +1,5 @@
-import type { Coordinate2D, TransportType } from '@/external/types';
-import type { RouteAuslastung } from '@/types/routing';
+import type { Coordinate2D, TransportType } from '#/server/external/types.js';
+import type { RouteAuslastung } from '#/types/routing.js';
 
 export interface StopPlaceIdentifier {
   stationId?: string;

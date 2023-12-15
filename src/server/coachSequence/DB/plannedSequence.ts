@@ -1,17 +1,14 @@
-import { checkSecrets } from '@/server/checkSecret';
-import { getSeatsForCoach } from '@/server/coachSequence/specialSeats';
-import { nameMap } from '@/server/coachSequence/baureihe';
+import { getSeatsForCoach } from '#/server/coachSequence/specialSeats.js';
+import { nameMap } from '#/server/coachSequence/baureihe.js';
 import Axios from 'axios';
 import type {
   CoachSequenceBaureihe,
   CoachSequenceGroup,
   CoachSequenceInformation,
-} from '@/types/coachSequence';
+} from '#/types/coachSequence.js';
 
 const apiUrl = process.env.PRIVATE_API_URL;
 const apiKey = process.env.PRIVATE_API_KEY;
-
-checkSecrets(apiUrl, apiKey);
 
 export const planSequenceAxios = Axios.create({
   baseURL: `${apiUrl}/plannedSequence/v1`,

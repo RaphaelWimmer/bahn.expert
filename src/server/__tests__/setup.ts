@@ -1,5 +1,5 @@
 /* eslint-disable unicorn/prefer-module */
-import { disconnectRedis } from '@/server/cache';
+import { disconnectRedis } from '#/server/cache.js';
 import Nock from 'nock';
 
 expect(new Date().getTimezoneOffset()).toBe(0);

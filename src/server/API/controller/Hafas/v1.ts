@@ -11,9 +11,9 @@ import {
   SuccessResponse,
   Tags,
 } from '@tsoa/runtime';
-import JourneyDetails from '@/server/HAFAS/JourneyDetails';
-import makeRequest from '@/server/HAFAS/Request';
-import type { AllowedHafasProfile } from '@/types/HAFAS';
+import JourneyDetails from '#/server/HAFAS/JourneyDetails.js';
+import makeRequest from '#/server/HAFAS/Request.js';
+import type { AllowedHafasProfile } from '#/types/HAFAS/index.js';
 import type { TsoaResponse } from '@tsoa/runtime';
 
 @Route('/hafas/v1')

@@ -1,10 +1,10 @@
-import * as HafasProfiles from './profiles';
-import { AllowedHafasProfile } from '@/types/HAFAS';
-import { parseLocL } from './helper/parseLocL';
-import { UpstreamApiRequestMetric } from '@/server/admin';
+import * as HafasProfiles from './profiles.js';
+import { AllowedHafasProfile } from '#/types/HAFAS/index.js';
+import { parseLocL } from './helper/parseLocL.js';
+import { UpstreamApiRequestMetric } from '#/server/admin/index.js';
 import Axios from 'axios';
-import parsePolyline from '@/server/HAFAS/helper/parsePolyline';
-import parseProduct from './helper/parseProduct';
+import parsePolyline from '#/server/HAFAS/helper/parsePolyline.js';
+import parseProduct from './helper/parseProduct.js';
 import type {
   Common,
   GenericHafasRequest,
@@ -12,32 +12,35 @@ import type {
   HafasResponse,
   ParsedCommon,
   SingleHafasRequest,
-} from '@/types/HAFAS';
+} from '#/types/HAFAS/index.js';
 import type {
   HimSearchRequest,
   HimSearchResponse,
-} from '@/types/HAFAS/HimSearch';
+} from '#/types/HAFAS/HimSearch.js';
 import type {
   JourneyDetailsRequest,
   JourneyDetailsResponse,
-} from '@/types/HAFAS/JourneyDetails';
+} from '#/types/HAFAS/JourneyDetails.js';
 import type {
   JourneyMatchRequest,
   JourneyMatchResponse,
-} from '@/types/HAFAS/JourneyMatch';
-import type { LocMatchRequest, LocMatchResponse } from '@/types/HAFAS/LocMatch';
+} from '#/types/HAFAS/JourneyMatch.js';
+import type {
+  LocMatchRequest,
+  LocMatchResponse,
+} from '#/types/HAFAS/LocMatch.js';
 import type {
   SearchOnTripRequest,
   SearchOnTripResponse,
-} from '@/types/HAFAS/SearchOnTrip';
+} from '#/types/HAFAS/SearchOnTrip.js';
 import type {
   StationBoardRequest,
   StationBoardResponse,
-} from '@/types/HAFAS/StationBoard';
+} from '#/types/HAFAS/StationBoard.js';
 import type {
   TripSearchRequest,
   TripSearchResponse,
-} from '@/types/HAFAS/TripSearch';
+} from '#/types/HAFAS/TripSearch.js';
 
 function createRequest(
   req: SingleHafasRequest,

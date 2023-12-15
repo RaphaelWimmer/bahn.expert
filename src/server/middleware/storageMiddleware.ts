@@ -1,4 +1,4 @@
-import { ServerStorage } from '@/client/Common/Storage';
+import { ServerStorage } from '#/Storage/index.js';
 import type { Context, Next } from 'koa';
 import type { CookieChangeOptions } from 'universal-cookie';
 

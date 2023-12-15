@@ -1,4 +1,4 @@
-import { logger } from '@/server/logger';
+import { logger } from '#/server/logger/index.js';
 import { v4 } from 'uuid';
 import Axios from 'axios';
 

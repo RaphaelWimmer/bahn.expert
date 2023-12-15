@@ -1,8 +1,8 @@
-import { getSingleJourneyTrip } from '@/server/sbb/trip';
-import { getStopPlaceByEva } from '@/server/StopPlace/search';
-import { logger } from '@/server/logger';
-import { sbbAxios } from '@/server/sbb/sbbAxios';
-import type { SBBCoachSequenceWithTrip } from '@/server/sbb/types';
+import { getSingleJourneyTrip } from '#/server/sbb/trip.js';
+import { getStopPlaceByEva } from '#/server/StopPlace/search.js';
+import { logger } from '#/server/logger/index.js';
+import { sbbAxios } from '#/server/sbb/sbbAxios.js';
+import type { SBBCoachSequenceWithTrip } from '#/server/sbb/types.js';
 
 function getCoachSequenceRequest(
   originId: string,

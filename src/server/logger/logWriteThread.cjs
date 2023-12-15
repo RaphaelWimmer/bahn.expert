@@ -3,7 +3,15 @@ const Axios = require('axios');
 
 const streams = [];
 
-if (process.env.PRETTY_LOG) {
+let hasPretty = false;
+try {
+  require.resolve('pino-pretty');
+  hasPretty = true;
+} catch {
+  // no pretty
+}
+
+if (hasPretty) {
   const pinoPretty = require('pino-pretty');
 
   const prettyLog = pinoPretty.prettyFactory({

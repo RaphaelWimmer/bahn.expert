@@ -1,4 +1,7 @@
-import type { AvailableBR, AvailableIdentifier } from '@/types/coachSequence';
+import type {
+  AvailableBR,
+  AvailableIdentifier,
+} from '#/types/coachSequence.js';
 
 interface Auslastungsstufe {
   auslastungsstufeErsteKlasse: string;

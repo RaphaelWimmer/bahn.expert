@@ -10,6 +10,8 @@ module.exports = {
     'import/resolver': {
       typescript: {
         project: ['./tsconfig.json'],
+          extensions: ['.js', '.ts', '.tsx', '.jsx'],
+        },
       },
     },
     react: { version: 'detect' },
@@ -37,7 +39,7 @@ module.exports = {
       rules: {
         '@typescript-eslint/no-unsafe-argument': 0,
         '@typescript-eslint/no-misused-promises': 0,
-
+        '@typescript-eslint/no-redundant-type-constituents': 0,
         '@typescript-eslint/prefer-nullish-coalescing': 0,
         '@typescript-eslint/ban-tslint-comment': 0,
       },
@@ -58,7 +60,7 @@ module.exports = {
         'no-restricted-imports': [
           'error',
           {
-            patterns: ['@/server/*'],
+            patterns: ['#/server/*'],
           },
         ],
         'no-process-env': 2,

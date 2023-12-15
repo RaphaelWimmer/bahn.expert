@@ -1,5 +1,5 @@
-import { uniqBy } from '@/client/util';
-import type { MsgL, ParsedCommon, RemL } from '@/types/HAFAS';
+import { uniqBy } from '#/util/index.js';
+import type { MsgL, ParsedCommon, RemL } from '#/types/HAFAS/index.js';
 
 export default (
   msgL: undefined | MsgL[],

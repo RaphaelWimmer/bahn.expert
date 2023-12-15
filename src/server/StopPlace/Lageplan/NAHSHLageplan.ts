@@ -1,6 +1,6 @@
-import { AllowedHafasProfile } from '@/types/HAFAS';
-import { Cache, CacheDatabase } from '@/server/cache';
-import { locMatch } from '@/server/HAFAS/LocMatch';
+import { AllowedHafasProfile } from '#/types/HAFAS/index.js';
+import { Cache, CacheDatabase } from '#/server/cache.js';
+import { locMatch } from '#/server/HAFAS/LocMatch.js';
 import Axios from 'axios';
 
 const cache = new Cache<string | null>(CacheDatabase.NAHSHLageplan);

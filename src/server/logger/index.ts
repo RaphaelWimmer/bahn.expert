@@ -1,9 +1,10 @@
-import './axiosLogging';
+import './axiosLogging.js';
+import { fileURLToPath } from 'node:url';
 import { SHARE_ENV, Worker } from 'node:worker_threads';
 import cookie from 'cookie';
-import koaLogger from './koaLogger';
+import koaLogger from './koaLogger.js';
 import path from 'node:path';
-import pino from 'pino';
+import { pino } from 'pino';
 import serializers from 'pino-std-serializers';
 
 const createWriteOptions = () => {
@@ -16,8 +17,10 @@ const createWriteOptions = () => {
   }
 
   const writeWorker = new Worker(
-    // eslint-disable-next-line unicorn/prefer-module
-    path.resolve(__dirname, 'logWriteThread.cjs'),
+    path.resolve(
+      path.dirname(fileURLToPath(import.meta.url)),
+      'logWriteThread.cjs',
+    ),
     {
       env: SHARE_ENV,
     },

@@ -16,7 +16,7 @@ import {
   subHours,
   subMinutes,
 } from 'date-fns';
-import { Cache, CacheDatabase } from '@/server/cache';
+import { Cache, CacheDatabase } from '#/server/cache.js';
 import {
   calculateVia,
   getAttr,
@@ -24,19 +24,19 @@ import {
   getTsOfNode,
   irisGetRequest,
   parseTs,
-} from './helper';
+} from './helper.js';
 import { diffArrays } from 'diff';
-import { getLineFromNumber } from '@/server/journeys/lineNumberMapping';
-import { getSingleHimMessageOfToday } from '@/server/HAFAS/HimSearch';
-import { getSingleStation } from '@/server/iris/station';
-import { getStopPlaceByEva } from '@/server/StopPlace/search';
+import { getLineFromNumber } from '#/server/journeys/lineNumberMapping.js';
+import { getSingleHimMessageOfToday } from '#/server/HAFAS/HimSearch.js';
+import { getSingleStation } from '#/server/iris/station.js';
+import { getStopPlaceByEva } from '#/server/StopPlace/search.js';
 import {
   ignoredMessageNumbers,
   messages,
   messageTypeLookup,
   supersededMessages,
-} from './messageLookup';
-import { uniqBy } from '@/client/util';
+} from './messageLookup.js';
+import { uniqBy } from '#/util/index.js';
 import xmljs from 'libxmljs2';
 import type {
   AbfahrtenResult,
@@ -44,7 +44,7 @@ import type {
   IrisMessage,
   Messages,
   Stop,
-} from '@/types/iris';
+} from '#/types/iris.js';
 import type { Element } from 'libxmljs2';
 
 interface ArDp {

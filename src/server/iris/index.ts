@@ -1,9 +1,9 @@
 /* eslint-disable no-console */
 import { compareAsc, parseISO } from 'date-fns';
-import { getStation } from './station';
-import { isStrikeMessage } from '@/server/iris/messageLookup';
-import { Timetable } from './Timetable';
-import type { Abfahrt, AbfahrtenResult } from '@/types/iris';
+import { getStation } from './station.js';
+import { isStrikeMessage } from '#/server/iris/messageLookup.js';
+import { Timetable } from './Timetable.js';
+import type { Abfahrt, AbfahrtenResult } from '#/types/iris.js';
 
 interface AbfahrtenOptions {
   lookahead: number;

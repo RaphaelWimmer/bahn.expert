@@ -1,12 +1,12 @@
-import type { HimSearchRequest } from '@/types/HAFAS/HimSearch';
-import type { JourneyDetailsRequest } from './JourneyDetails';
-import type { JourneyMatchRequest } from '@/types/HAFAS/JourneyMatch';
-import type { JourneyTreeRequest } from '@/types/HAFAS/deprecated/JourneyTree';
-import type { LocMatchRequest } from './LocMatch';
-import type { MinimalStopPlace } from '@/types/stopPlace';
-import type { SearchOnTripRequest } from '@/types/HAFAS/SearchOnTrip';
-import type { StationBoardRequest } from '@/types/HAFAS/StationBoard';
-import type { TripSearchRequest } from './TripSearch';
+import type { HimSearchRequest } from '#/types/HAFAS/HimSearch.js';
+import type { JourneyDetailsRequest } from './JourneyDetails.js';
+import type { JourneyMatchRequest } from '#/types/HAFAS/JourneyMatch.js';
+import type { JourneyTreeRequest } from '#/types/HAFAS/deprecated/JourneyTree.js';
+import type { LocMatchRequest } from './LocMatch.js';
+import type { MinimalStopPlace } from '#/types/stopPlace.js';
+import type { SearchOnTripRequest } from '#/types/HAFAS/SearchOnTrip.js';
+import type { StationBoardRequest } from '#/types/HAFAS/StationBoard.js';
+import type { TripSearchRequest } from './TripSearch.js';
 
 export type JourneyFilterMode = 'BIT' | 'EXC' | 'INC' | 'UNDEF';
 export type JourneyFilterType =

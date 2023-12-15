@@ -1,6 +1,6 @@
-import type { AuslastungsValue } from '@/types/routing';
-import type { MinimalStopPlace } from '@/types/stopPlace';
-import type { VehicleCategory } from '@/external/generated/coachSequence';
+import type { AuslastungsValue } from '#/types/routing.js';
+import type { MinimalStopPlace } from '#/types/stopPlace.js';
+import type { VehicleCategory } from '#/server/external/generated/coachSequence/index.js';
 
 export interface CoachSequencePosition {
   startPercent: number;

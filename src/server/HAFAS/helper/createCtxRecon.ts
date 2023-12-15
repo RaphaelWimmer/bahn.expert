@@ -1,9 +1,9 @@
 import { format } from 'date-fns';
-import type { RemL } from '@/types/HAFAS';
+import type { RemL } from '#/types/HAFAS/index.js';
 import type {
   RouteValidArrivalStop,
   RouteValidDepartureStop,
-} from '@/types/HAFAS/JourneyDetails';
+} from '#/types/HAFAS/JourneyDetails.js';
 
 interface CreateCtxReconOptions {
   firstStop: RouteValidDepartureStop;

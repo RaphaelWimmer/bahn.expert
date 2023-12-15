@@ -1,13 +1,16 @@
-import { Cache, CacheDatabase } from '@/server/cache';
-import { parseLocL } from './helper/parseLocL';
-import makeRequest from './Request';
+import { Cache, CacheDatabase } from '#/server/cache.js';
+import { parseLocL } from './helper/parseLocL.js';
+import makeRequest from './Request.js';
 import type {
   AllowedHafasProfile,
   HafasResponse,
   HafasStation,
   ParsedCommon,
-} from '@/types/HAFAS';
-import type { LocMatchRequest, LocMatchResponse } from '@/types/HAFAS/LocMatch';
+} from '#/types/HAFAS/index.js';
+import type {
+  LocMatchRequest,
+  LocMatchResponse,
+} from '#/types/HAFAS/LocMatch.js';
 
 const cache = new Cache<HafasStation[]>(CacheDatabase.LocMatch);
 

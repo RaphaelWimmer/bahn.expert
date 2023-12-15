@@ -1,5 +1,5 @@
-import { AuslastungsValue } from '@/types/routing';
-import { enrichCoachSequence } from '@/server/coachSequence/commonMapping';
+import { AuslastungsValue } from '#/types/routing.js';
+import { enrichCoachSequence } from '#/server/coachSequence/commonMapping.js';
 import type {
   CoachSequenceCoach,
   CoachSequenceCoachFeatures,
@@ -9,13 +9,13 @@ import type {
   CoachSequenceProduct,
   CoachSequenceSector,
   CoachSequenceStop,
-} from '@/types/coachSequence';
+} from '#/types/coachSequence.js';
 import type {
   OEBBCoachSequenceWagon,
   OEBBInfo,
   OEBBPlatformInfo,
   OEBBTimeTableInfo,
-} from '@/oebb/types/coachSequence';
+} from '#/server/oebb/types/coachSequence.js';
 
 function mapClass(wagon: OEBBCoachSequenceWagon): CoachSequenceCoach['class'] {
   if (wagon.kind === 'TFZ') return 4;

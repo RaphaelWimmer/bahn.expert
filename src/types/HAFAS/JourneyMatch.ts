@@ -5,8 +5,8 @@ import type {
   JourneyFilter,
   ParsedProduct,
   RemL,
-} from '.';
-import type { RouteStop } from '@/types/routing';
+} from './index.js';
+import type { RouteStop } from '#/types/routing.js';
 
 interface JounreyMatchRequestRes {
   jnyFltrL?: JourneyFilter[];

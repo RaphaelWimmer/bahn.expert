@@ -1,4 +1,4 @@
-import type { Common, GenericHafasRequest } from '.';
+import type { Common, GenericHafasRequest } from './index.js';
 
 export interface LocMatchResponse {
   common: Common;

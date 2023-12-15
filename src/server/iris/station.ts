@@ -1,10 +1,10 @@
 /* eslint no-param-reassign: 0, no-await-in-loop: 0 */
-import { Cache, CacheDatabase } from '@/server/cache';
-import { irisGetRequest } from './helper';
-import { stationMetaFilter } from '@/server/iris/stationMetaFilter';
+import { Cache, CacheDatabase } from '#/server/cache.js';
+import { irisGetRequest } from './helper.js';
+import { stationMetaFilter } from '#/server/iris/stationMetaFilter.js';
 import xmljs from 'libxmljs2';
 import type { Element } from 'libxmljs2';
-import type { IrisStation, IrisStationWithRelated } from '@/types/iris';
+import type { IrisStation, IrisStationWithRelated } from '#/types/iris.js';
 
 const cache = new Cache<IrisStation | null>(CacheDatabase.Station);
 

@@ -9,9 +9,9 @@ import type {
   MsgL,
   OptionalLocL,
   TrnCmpSX,
-} from '.';
-import type { CommonRoutingOptions } from '@/types/common';
-import type { JnyCl, LoyalityCard, TravelerType } from '@/types/HAFAS/Tarif';
+} from './index.js';
+import type { CommonRoutingOptions } from '#/types/common.js';
+import type { JnyCl, LoyalityCard, TravelerType } from '#/types/HAFAS/Tarif.js';
 
 export interface TripSearchTraveler {
   type: TravelerType;

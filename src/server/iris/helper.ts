@@ -1,11 +1,10 @@
-import { checkSecrets } from '@/server/checkSecret';
 import { isValid, parse } from 'date-fns';
-import { upstreamApiCountInterceptor } from '@/server/admin';
+import { upstreamApiCountInterceptor } from '#/server/admin/index.js';
 import { zonedTimeToUtc } from 'date-fns-tz';
 import Axios from 'axios';
 import type { AxiosInstance } from 'axios';
 import type { Element } from 'libxmljs2';
-import type { Stop } from '@/types/iris';
+import type { Stop } from '#/types/iris.js';
 
 const noncdRequest = Axios.create({
   baseURL: process.env.IRIS_URL || 'http://iris.dummy',
@@ -33,8 +32,6 @@ if (process.env.IRIS_FALLBACK_URL) {
 noncdRequest.interceptors.request.use(
   upstreamApiCountInterceptor.bind(undefined, 'iris-noncd'),
 );
-
-checkSecrets(process.env.IRIS_URL, process.env.IRIS_FALLBACK_URL);
 
 export async function irisGetRequest<T>(url: string): Promise<T> {
   try {

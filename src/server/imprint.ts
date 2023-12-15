@@ -1,5 +1,3 @@
-import { checkSecrets } from '@/server/checkSecret';
-
 export const imprint = {
   name: process.env.IMPRINT_NAME!,
   street: process.env.IMPRINT_STREET!,
@@ -8,10 +6,6 @@ export const imprint = {
 
 if (process.env.TEST_RUN) {
   imprint.name = "TEST RUN, shouldn't be public!";
+  imprint.street = "TEST RUN, shouldn't be public!";
+  imprint.town = "TEST RUN, shouldn't be public!";
 }
-
-checkSecrets(
-  process.env.IMPRINT_NAME,
-  process.env.IMPRINT_STREET,
-  process.env.IMPRINT_TOWN,
-);

@@ -2,7 +2,7 @@ import type {
   AvailableIdentifier,
   CoachSequenceBaureihe,
   CoachSequenceCoach,
-} from '@/types/coachSequence';
+} from '#/types/coachSequence.js';
 
 export const nameMap: Record<AvailableIdentifier, string> = {
   '401': 'ICE 1 (BR401)',

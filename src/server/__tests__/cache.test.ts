@@ -1,4 +1,4 @@
-import { Cache, parseCacheTTL } from '@/server/cache';
+import { Cache, parseCacheTTL } from '#/server/cache.js';
 
 const defineCacheTests = (createCache: () => Cache<unknown>) => {
   const cache: Cache<unknown> = createCache();

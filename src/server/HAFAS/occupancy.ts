@@ -1,7 +1,7 @@
-import { Cache, CacheDatabase } from '@/server/cache';
-import { searchStopPlace } from '@/server/StopPlace/search';
-import { tripSearch } from './TripSearch/TripSearch';
-import type { RouteAuslastung, SingleRoute } from '@/types/routing';
+import { Cache, CacheDatabase } from '#/server/cache.js';
+import { searchStopPlace } from '#/server/StopPlace/search.js';
+import { tripSearch } from './TripSearch/TripSearch.js';
+import type { RouteAuslastung, SingleRoute } from '#/types/routing.js';
 
 async function getRelevantTrip(
   start: string,

@@ -1,4 +1,4 @@
-import { coachSequence } from '@/server/coachSequence';
+import { coachSequence } from '#/server/coachSequence/index.js';
 import {
   Controller,
   Get,
@@ -9,10 +9,10 @@ import {
   Route,
   Tags,
 } from '@tsoa/runtime';
-import { getPlannedSequence } from '@/server/coachSequence/DB/plannedSequence';
-import { isAllowed } from '@/server/API/controller/journeys/v1';
-import type { CoachSequenceInformation } from '@/types/coachSequence';
-import type { EvaNumber } from '@/types/common';
+import { getPlannedSequence } from '#/server/coachSequence/DB/plannedSequence.js';
+import { isAllowed } from '#/server/API/controller/journeys/v1.js';
+import type { CoachSequenceInformation } from '#/types/coachSequence.js';
+import type { EvaNumber } from '#/types/common.js';
 import type { Request as KoaRequest } from 'koa';
 import type { TsoaResponse } from '@tsoa/runtime';
 

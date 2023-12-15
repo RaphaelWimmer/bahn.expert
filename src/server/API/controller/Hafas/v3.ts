@@ -1,4 +1,4 @@
-import { additionalJourneyInformation } from '@/server/journeys/additionalJourneyInformation';
+import { additionalJourneyInformation } from '#/server/journeys/additionalJourneyInformation.js';
 import {
   Body,
   Controller,
@@ -11,27 +11,27 @@ import {
   Route,
   Tags,
 } from '@tsoa/runtime';
-import { locMatch } from '@/server/HAFAS/LocMatch';
-import { stopOccupancy } from '@/server/HAFAS/occupancy';
-import { tripSearch } from '@/server/HAFAS/TripSearch/TripSearch';
-import StationBoard from '@/server/HAFAS/StationBoard';
-import StationBoardToTimetables from '@/server/HAFAS/StationBoard/StationBoardToTimetables';
-import type { AbfahrtenResult } from '@/types/iris';
-import type { AdditionalJourneyInformation } from '@/types/HAFAS/JourneyDetails';
+import { locMatch } from '#/server/HAFAS/LocMatch.js';
+import { stopOccupancy } from '#/server/HAFAS/occupancy.js';
+import { tripSearch } from '#/server/HAFAS/TripSearch/TripSearch.js';
+import StationBoard from '#/server/HAFAS/StationBoard/index.js';
+import StationBoardToTimetables from '#/server/HAFAS/StationBoard/StationBoardToTimetables.js';
+import type { AbfahrtenResult } from '#/types/iris.js';
+import type { AdditionalJourneyInformation } from '#/types/HAFAS/JourneyDetails.js';
 import type {
   AllowedHafasProfile,
   HafasResponse,
   HafasStation,
-} from '@/types/HAFAS';
+} from '#/types/HAFAS/index.js';
 import type {
   ArrivalStationBoardEntry,
   StationBoardEntry,
-} from '@/types/stationBoard';
+} from '#/types/stationBoard.js';
 import type { Request as KRequest } from 'koa';
-import type { LocMatchResponse } from '@/types/HAFAS/LocMatch';
-import type { RouteAuslastung, RoutingResult } from '@/types/routing';
-import type { StationBoardResponse } from '@/types/HAFAS/StationBoard';
-import type { TripSearchOptionsV3 } from '@/types/HAFAS/TripSearch';
+import type { LocMatchResponse } from '#/types/HAFAS/LocMatch.js';
+import type { RouteAuslastung, RoutingResult } from '#/types/routing.js';
+import type { StationBoardResponse } from '#/types/HAFAS/StationBoard.js';
+import type { TripSearchOptionsV3 } from '#/types/HAFAS/TripSearch.js';
 import type { TsoaResponse } from '@tsoa/runtime';
 
 @Route('/hafas/v3')

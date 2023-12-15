@@ -1,21 +1,21 @@
-import { Cache, CacheDatabase } from '@/server/cache';
-import { logger } from '@/server/logger';
+import { Cache, CacheDatabase } from '#/server/cache.js';
+import { logger } from '#/server/logger/index.js';
 import { parse } from 'date-fns';
 import { Temporal } from '@js-temporal/polyfill';
-import makeRequest from '@/server/HAFAS/Request';
-import parseTime from '@/server/HAFAS/helper/parseTime';
+import makeRequest from '#/server/HAFAS/Request.js';
+import parseTime from '#/server/HAFAS/helper/parseTime.js';
 import type {
   AllowedHafasProfile,
   HafasResponse,
   ParsedCommon,
-} from '@/types/HAFAS';
+} from '#/types/HAFAS/index.js';
 import type {
   HimMessage,
   HimSearchRequest,
   HimSearchResponse,
   ParsedHimMessage,
   ParsedHimSearchResponse,
-} from '@/types/HAFAS/HimSearch';
+} from '#/types/HAFAS/HimSearch.js';
 
 const parseHimMessage = (himMessage: HimMessage, common: ParsedCommon) => {
   const head = himMessage.head.replaceAll(` (Quelle: ${himMessage.comp})`, '');

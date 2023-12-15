@@ -1,5 +1,5 @@
-import { getStopPlaceByEva } from '@/server/StopPlace/search';
-import type { RouteStop } from '@/types/routing';
+import { getStopPlaceByEva } from '#/server/StopPlace/search.js';
+import type { RouteStop } from '#/types/routing.js';
 
 export async function addRL100(stops: RouteStop[]): Promise<void> {
   await Promise.all(

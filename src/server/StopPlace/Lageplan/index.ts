@@ -1,5 +1,5 @@
-import { getDBLageplan } from './DBLageplan';
-import { getNAHSHLageplan } from './NAHSHLageplan';
+import { getDBLageplan } from './DBLageplan.js';
+import { getNAHSHLageplan } from './NAHSHLageplan.js';
 
 export async function getLageplan(
   _stationName: string,

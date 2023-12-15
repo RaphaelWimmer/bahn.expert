@@ -4,12 +4,12 @@ import {
   mockFchg,
   mockLageplan,
   mockSearch,
-} from '@/server/__tests__/mockHelper';
-import { Timetable } from '@/server/iris/Timetable';
+} from '#/server/__tests__/mockHelper.js';
+import { Timetable } from '#/server/iris/Timetable.js';
 import fs from 'node:fs';
 import path from 'node:path';
 
-jest.mock('@/server/cache');
+jest.mock('#/server/cache.js');
 
 describe('withFchg', () => {
   beforeAll(() => {

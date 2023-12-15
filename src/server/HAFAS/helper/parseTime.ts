@@ -1,5 +1,5 @@
 import { addMilliseconds, addMinutes } from 'date-fns';
-import parseDuration from './parseDuration';
+import parseDuration from './parseDuration.js';
 
 function parseTime(date: Date, time: string, tzOffset?: number): Date;
 function parseTime(date: Date, time: undefined, tzOffset?: number): undefined;

@@ -1,34 +1,26 @@
 {
   "compilerOptions": {
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
     "useUnknownInCatchVariables": false,
+    "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
-    "jsx": "preserve",
-    "lib": ["DOM", "ES2020", "ESNext"],
-    "module": "esnext",
-    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "module": "Node16",
+    "moduleResolution": "Node16",
     "noEmit": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    // "preserveConstEnums": false,
-    "removeComments": false,
+    "preserveConstEnums": false,
     "skipLibCheck": true,
     "sourceMap": false,
     "strict": true,
     "target": "esnext",
-    "emitDecoratorMetadata": false,
+    "types": ["jest", "vite/client"],
     "resolveJsonModule": true,
-    "types": ["@jest/globals", "@testing-library/jest-dom"],
+    "emitDecoratorMetadata": false,
     "paths": {
-      "@/*": ["./src/*"]
-    },
-    "plugins": [
-      {
-        "name": "@styled/typescript-styled-plugin"
-      }
-    ],
-    "jsxImportSource": "@emotion/react"
+      "#/*": ["./src/*"],
+      "@mantine/core": ["./node_modules/@mantine/core/lib/index.d.ts"]
+    }
   },
-  "include": ["@types", "src", "cypress.config.ts"]
+  "include": ["src", "renderer", "pages", "@types", "vite.config.ts"]
 }

@@ -1,16 +1,9 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
-import nock from 'nock';
+/* eslint-disable no-var */
+import type nock from 'nock';
 
 declare global {
   declare namespace globalThis {
-    declare var IMPRINT: {
-      name: string;
-      street: string;
-      town: string;
-    };
     declare var BASE_URL: string;
-    declare var RAW_BASE_URL: string;
-    declare var RENDERED_THEME: string;
 
     // test only
     declare var nock: nock.Scope;

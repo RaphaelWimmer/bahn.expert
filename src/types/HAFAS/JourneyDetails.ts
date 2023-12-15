@@ -7,9 +7,9 @@ import type {
   ParsedPolyline,
   ParsedProduct,
   RemL,
-} from '.';
-import type { EvaNumber } from '@/types/common';
-import type { RouteAuslastung, RouteStop } from '@/types/routing';
+} from './index.js';
+import type { EvaNumber } from '#/types/common.js';
+import type { RouteAuslastung, RouteStop } from '#/types/routing.js';
 
 // Additional Information we can only get from HAFAS in case of RIS Details. (Occupancy & correct operator names)
 export interface AdditionalJourneyInformation {

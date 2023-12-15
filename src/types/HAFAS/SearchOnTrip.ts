@@ -1,7 +1,7 @@
-import type { Common, GenericHafasRequest, ParsedPolyline } from '.';
-import type { HimIrisMessage } from '@/types/iris';
-import type { OutConL, SotCtxt } from './TripSearch';
-import type { RouteJourneySegmentTrain, RouteStop } from '@/types/routing';
+import type { Common, GenericHafasRequest, ParsedPolyline } from './index.js';
+import type { HimIrisMessage } from '#/types/iris.js';
+import type { OutConL, SotCtxt } from './TripSearch.js';
+import type { RouteJourneySegmentTrain, RouteStop } from '#/types/routing.js';
 
 export interface SearchOnTripResponse {
   common: Common;

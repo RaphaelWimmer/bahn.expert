@@ -1,11 +1,11 @@
-import { Cache, CacheDatabase } from '@/server/cache';
-import { findSingleStopPlace } from '@/server/sbb/stopPlace';
+import { Cache, CacheDatabase } from '#/server/cache.js';
+import { findSingleStopPlace } from '#/server/sbb/stopPlace.js';
 import { format } from 'date-fns';
-import { getStopPlaceByEva } from '@/server/StopPlace/search';
-import { logger } from '@/server/logger';
-import { sbbAxios } from '@/server/sbb/sbbAxios';
-import type { MinimalStopPlace } from '@/types/stopPlace';
-import type { SBBTrip } from '@/server/sbb/types';
+import { getStopPlaceByEva } from '#/server/StopPlace/search.js';
+import { logger } from '#/server/logger/index.js';
+import { sbbAxios } from '#/server/sbb/sbbAxios.js';
+import type { MinimalStopPlace } from '#/types/stopPlace.js';
+import type { SBBTrip } from '#/server/sbb/types.js';
 
 const tripCache = new Cache<SBBTrip>(CacheDatabase.SBBTrip);
 

@@ -1,7 +1,7 @@
-import { fetchSBBCoachSequence } from '@/server/sbb/coachSequence';
-import { mapSBBCoachSequence } from '@/server/coachSequence/SBB/SBBMapping';
-import { UpstreamApiRequestMetric } from '@/server/admin';
-import type { CoachSequenceInformation } from '@/types/coachSequence';
+import { fetchSBBCoachSequence } from '#/server/sbb/coachSequence.js';
+import { mapSBBCoachSequence } from '#/server/coachSequence/SBB/SBBMapping.js';
+import { UpstreamApiRequestMetric } from '#/server/admin/index.js';
+import type { CoachSequenceInformation } from '#/types/coachSequence.js';
 
 export async function SBBCoachSequence(
   evaNumber: string,

@@ -1,5 +1,10 @@
-import { getIdentifiers } from '@/server/StopPlace/search';
-import type { Crd, HafasStation, LocL, ParsedProduct } from '@/types/HAFAS';
+import { getIdentifiers } from '#/server/StopPlace/search.js';
+import type {
+  Crd,
+  HafasStation,
+  LocL,
+  ParsedProduct,
+} from '#/types/HAFAS/index.js';
 
 function normalizeStopPlaceName(name: string) {
   return name.replace('(', ' (').replace(')', ') ').trim();

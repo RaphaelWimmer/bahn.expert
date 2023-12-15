@@ -1,12 +1,12 @@
 import { differenceInMinutes } from 'date-fns';
-import checkCoachSequence from './checkCoachSequence';
-import parseTime from './parseTime';
+import checkCoachSequence from './checkCoachSequence.js';
+import parseTime from './parseTime.js';
 import type {
   CommonDeparture,
   CommonStopInfo,
   ParsedCommon,
   ParsedProduct,
-} from '@/types/HAFAS';
+} from '#/types/HAFAS/index.js';
 
 export default (
   d: CommonDeparture,

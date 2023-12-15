@@ -2,7 +2,7 @@ import type {
   CommonProductInfo,
   CommonStop,
   ParsedCommon,
-} from '@/types/HAFAS';
+} from '#/types/HAFAS/index.js';
 
 export const adjustProductOperator = (
   mainProduct: CommonProductInfo,

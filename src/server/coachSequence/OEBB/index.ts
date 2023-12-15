@@ -1,7 +1,7 @@
-import { info } from '@/oebb';
-import { mapInformation } from '@/server/coachSequence/OEBB/OEBBMapping';
-import { UpstreamApiRequestMetric } from '@/server/admin';
-import type { CoachSequenceInformation } from '@/types/coachSequence';
+import { info } from '#/server/oebb/index.js';
+import { mapInformation } from '#/server/coachSequence/OEBB/OEBBMapping.js';
+import { UpstreamApiRequestMetric } from '#/server/admin/index.js';
+import type { CoachSequenceInformation } from '#/types/coachSequence.js';
 
 export async function OEBBCoachSequence(
   trainNumber: string,

@@ -1,9 +1,9 @@
-import { Cache, CacheDatabase } from '@/server/cache';
-import { getOccupancy } from '@/server/sbb/occupancy';
-import Detail from '@/server/HAFAS/Detail';
-import type { AdditionalJourneyInformation } from '@/types/HAFAS/JourneyDetails';
-import type { EvaNumber } from '@/types/common';
-import type { RouteAuslastung } from '@/types/routing';
+import { Cache, CacheDatabase } from '#/server/cache.js';
+import { getOccupancy } from '#/server/sbb/occupancy.js';
+import Detail from '#/server/HAFAS/Detail.js';
+import type { AdditionalJourneyInformation } from '#/types/HAFAS/JourneyDetails.js';
+import type { EvaNumber } from '#/types/common.js';
+import type { RouteAuslastung } from '#/types/routing.js';
 
 const additionalInformationCache = new Cache<
   AdditionalJourneyInformation | undefined

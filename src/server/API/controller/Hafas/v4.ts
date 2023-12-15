@@ -1,6 +1,6 @@
 import { Controller, Get, Hidden, Route } from '@tsoa/runtime';
-import { getJourneyDetails } from '@/external/risJourneys';
-import { TransportType } from '@/external/generated/risJourneys';
+import { getJourneyDetails } from '#/server/external/risJourneys.js';
+import { TransportType } from '#/server/external/generated/risJourneys/index.js';
 import { v4 } from 'uuid';
 import axios from 'axios';
 

@@ -1,4 +1,4 @@
-import { sbbAxios } from '@/server/sbb/sbbAxios';
+import { sbbAxios } from '#/server/sbb/sbbAxios.js';
 
 function getJourneyDetailsRequest(jid: string) {
   return {

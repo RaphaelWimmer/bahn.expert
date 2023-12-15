@@ -1,19 +1,19 @@
 import { parse } from 'date-fns';
-import parseCommonArrival from '../helper/parseCommonArrival';
-import parseCommonDeparture from '../helper/parseCommonDeparture';
-import parseMessages from '../helper/parseMessages';
-import parseStop from '../helper/parseStop';
+import parseCommonArrival from '../helper/parseCommonArrival.js';
+import parseCommonDeparture from '../helper/parseCommonDeparture.js';
+import parseMessages from '../helper/parseMessages.js';
+import parseStop from '../helper/parseStop.js';
 import type {
   CommonArrival,
   CommonDeparture,
   HafasResponse,
   ParsedCommon,
-} from '@/types/HAFAS';
-import type { StationBoardEntry } from '@/types/stationBoard';
+} from '#/types/HAFAS/index.js';
+import type { StationBoardEntry } from '#/types/stationBoard.js';
 import type {
   StationBoardJny,
   StationBoardResponse,
-} from '@/types/HAFAS/StationBoard';
+} from '#/types/HAFAS/StationBoard.js';
 
 const isArrival = (a: CommonArrival | CommonDeparture): a is CommonArrival =>
   a.hasOwnProperty('aOutR');

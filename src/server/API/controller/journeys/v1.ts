@@ -9,23 +9,23 @@ import {
   Route,
   Tags,
 } from '@tsoa/runtime';
-import { enrichedJourneyMatch } from '@/server/HAFAS/JourneyMatch';
+import { enrichedJourneyMatch } from '#/server/HAFAS/JourneyMatch.js';
 import {
   findJourney,
   findJourneyHafasCompatible,
   getJourneyDetails,
   health,
-} from '@/external/risJourneys';
+} from '#/server/external/risJourneys.js';
 import {
   getCategoryAndNumberFromName,
   journeyDetails,
-} from '@/server/journeys/journeyDetails';
-import Detail from '@/server/HAFAS/Detail';
-import type { EvaNumber } from '@/types/common';
-import type { JourneyEventBased } from '@/external/generated/risJourneys';
+} from '#/server/journeys/journeyDetails.js';
+import Detail from '#/server/HAFAS/Detail.js';
+import type { EvaNumber } from '#/types/common.js';
+import type { JourneyEventBased } from '#/server/external/generated/risJourneys/index.js';
 import type { Request as KoaRequest } from 'koa';
-import type { ParsedJourneyMatchResponse } from '@/types/HAFAS/JourneyMatch';
-import type { ParsedSearchOnTripResponse } from '@/types/HAFAS/SearchOnTrip';
+import type { ParsedJourneyMatchResponse } from '#/types/HAFAS/JourneyMatch.js';
+import type { ParsedSearchOnTripResponse } from '#/types/HAFAS/SearchOnTrip.js';
 import type { TsoaResponse } from '@tsoa/runtime';
 
 const allowedReferer = ['https://bahn.expert', 'https://beta.bahn.expert'];
