@@ -7,6 +7,7 @@ import KoaStatic from 'koa-static';
 import path from 'node:path';
 import URL from 'node:url';
 import type { Context, Middleware } from 'koa';
+import createAdmin from './admin/index.js';
 
 const isProduction = process.env.NODE_ENV === 'production';
 let root = `${path.dirname(URL.fileURLToPath(import.meta.url))}/../..`;
@@ -79,5 +80,7 @@ export async function createNodeServer(): Promise<void> {
   if (!isProduction) {
     // eslint-disable-next-line no-console
     console.log('running in DEV mode!');
+  } else {
+    createAdmin();
   }
 }
