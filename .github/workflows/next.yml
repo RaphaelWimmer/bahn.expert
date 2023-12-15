@@ -35,7 +35,6 @@ jobs:
           tags: 'next,${{ github.sha }}'
   createDeploy:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
     needs:
       - docker
     steps:
