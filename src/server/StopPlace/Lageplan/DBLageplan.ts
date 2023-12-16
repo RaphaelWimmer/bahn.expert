@@ -9,7 +9,6 @@ export async function getDBLageplan(
 ): Promise<string | undefined> {
   try {
     const cached = await getCachedDBLageplan(evaNumber);
-    console.log(cached);
 
     if (cached) return cached;
     // undefined = haven't tried yet

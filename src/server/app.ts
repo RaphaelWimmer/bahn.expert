@@ -1,4 +1,5 @@
 import { renderPage } from 'vike/server';
+import createAdmin from './admin/index.js';
 import http from 'node:http';
 import Koa from 'koa';
 import KoaBodyparser from 'koa-bodyparser';
@@ -7,7 +8,6 @@ import KoaStatic from 'koa-static';
 import path from 'node:path';
 import URL from 'node:url';
 import type { Context, Middleware } from 'koa';
-import createAdmin from './admin/index.js';
 
 const isProduction = process.env.NODE_ENV === 'production';
 let root = `${path.dirname(URL.fileURLToPath(import.meta.url))}/../..`;
@@ -64,13 +64,17 @@ export async function createApp(): Promise<Koa> {
       return next();
     }
 
+    if (httpResponse.earlyHints) {
+      ctx.res.writeEarlyHints({
+        link: httpResponse.earlyHints.map((e) => e.earlyHintLink),
+      });
+    }
+
     for (const [name, value] of httpResponse.headers) {
       ctx.headers[name] = value;
     }
     ctx.status = httpResponse.statusCode;
-
-    ctx.respond = false;
-    httpResponse.pipe(ctx.res);
+    ctx.body = httpResponse.body;
   });
 
   return app;
@@ -83,10 +87,10 @@ export async function createNodeServer(): Promise<void> {
 
   server.addListener('request', app.callback());
   server.listen(port);
-  if (!isProduction) {
+  if (isProduction) {
+    createAdmin();
+  } else {
     // eslint-disable-next-line no-console
     console.log('running in DEV mode!');
-  } else {
-    createAdmin();
   }
 }

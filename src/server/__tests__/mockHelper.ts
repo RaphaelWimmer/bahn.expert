@@ -1,4 +1,4 @@
-import { HttpResponse, http } from 'msw';
+import { http, HttpResponse } from 'msw';
 
 const emptyTimetable = '<timetable station="empty"></timetable>';
 
@@ -108,7 +108,7 @@ export function mockFchg(result: string = emptyTimetable): void {
   );
 }
 
-export function mockAllStations() {
+export function mockAllStations(): void {
   globalThis.mockServer.use(
     http.get(/http:\/\/iris\.dummy\/station\/.*/, () =>
       HttpResponse.xml('<stations></stations>'),

@@ -2,24 +2,20 @@ import { dangerouslySkipEscape, escapeInject } from 'vike/server';
 import { Layout } from './Layout.js';
 import { ColorSchemeScript as MantineColorSchemeScript } from '@mantine/core';
 import ReactDOMServer from 'react-dom/server';
-import { renderToStream } from 'react-streaming/server';
-import { OnRenderHtmlAsync } from 'vike/types';
+import type { OnRenderHtmlAsync } from 'vike/types';
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types, @typescript-eslint/require-await
 export const onRenderHtml: OnRenderHtmlAsync = async (pageContext) => {
-  const { Page, pageProps, userAgent, rawBaseUrl } = pageContext;
+  const { Page, pageProps, rawBaseUrl } = pageContext;
 
   // This render() hook only supports SSR, see https://vike.dev/render-modes for how to modify render() to support SPA
   if (!Page)
     throw new Error('My render() hook expects pageContext.Page to be defined');
   // eslint-disable-next-line testing-library/render-result-naming-convention
-  const renderedStream = await renderToStream(
+  const renderedHTML = ReactDOMServer.renderToString(
     <Layout>
       <Page {...pageProps} />
     </Layout>,
-    {
-      userAgent,
-    },
   );
 
   // eslint-disable-next-line testing-library/render-result-naming-convention
@@ -33,7 +29,9 @@ export const onRenderHtml: OnRenderHtmlAsync = async (pageContext) => {
   const desc = documentProps?.description || 'Next Gen bahn.expert';
   const statPart =
     process.env.NODE_ENV === 'production'
-      ? `<script async defer data-api="https://${rawBaseUrl}/api/event" data-domain="${rawBaseUrl}" src="https://${rawBaseUrl}/js/script.js"></script>`
+      ? dangerouslySkipEscape(
+          `<script async defer data-api="https://${rawBaseUrl}/api/event" data-domain="${rawBaseUrl}" src="https://${rawBaseUrl}/js/script.js"></script>`,
+        )
       : '';
 
   const documentHtml = escapeInject`<!DOCTYPE html>
@@ -56,7 +54,7 @@ export const onRenderHtml: OnRenderHtmlAsync = async (pageContext) => {
       </head>
       <body>
       <a rel="me" style="display:none" href="https://chaos.social/@marudor"></a>
-        <div id="react-root">${renderedStream}</div>
+        <div id="react-root">${dangerouslySkipEscape(renderedHTML)}</div>
       </body>
     </html>`;
 

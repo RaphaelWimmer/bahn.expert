@@ -1,5 +1,6 @@
 /* eslint-disable unicorn/prefer-module */
 /* eslint no-sync: 0 */
+import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest';
 import {
   mockAllStations,
   mockFchg,
@@ -8,7 +9,6 @@ import {
 import { Timetable } from '#/server/iris/Timetable.js';
 import fs from 'node:fs';
 import path from 'node:path';
-import { describe, beforeAll, afterAll, it, expect, vi } from 'vitest';
 
 vi.mock('#/server/cache.js');
 

@@ -1,6 +1,6 @@
 /* eslint-disable unicorn/prefer-module */
+import { afterAll, afterEach, beforeAll, expect } from 'vitest';
 import { disconnectRedis } from '#/server/cache.js';
-import { expect, beforeAll, afterAll, afterEach } from 'vitest';
 import { setupServer } from 'msw/node';
 
 expect(new Date().getTimezoneOffset()).toBe(0);

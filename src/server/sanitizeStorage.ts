@@ -1,7 +1,7 @@
 // import type { MinimalStopPlace } from '#/types/stopPlace';
 import type { ServerStorage } from '#/Storage/index.js';
 
-export function sanitizeStorage(storage: ServerStorage): void {
+export function sanitizeStorage(_storage: ServerStorage): void {
   // sanitizeFavs(storage, 'favs');
   // sanitizeFavs(storage, 'regionalFavs');
   // sanitizeRoutingFavs(storage, 'rfavs');

@@ -1,6 +1,6 @@
 import { hydrateRoot } from 'react-dom/client';
 import { Layout } from './Layout.js';
-import { OnRenderClientSync } from 'vike/types';
+import type { OnRenderClientSync } from 'vike/types';
 
 // This render() hook only supports SSR, see https://vike.dev/render-modes for how to modify render() to support SPA
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types, @typescript-eslint/require-await

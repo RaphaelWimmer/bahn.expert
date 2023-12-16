@@ -22,5 +22,13 @@
       "@mantine/core": ["./node_modules/@mantine/core/lib/index.d.ts"]
     }
   },
-  "include": ["src", "renderer", "pages", "@types", "vite.config.ts"]
+  "include": [
+    "src",
+    "renderer",
+    "pages",
+    "@types",
+    "vite.config.ts",
+    "vitest.workspace.ts"
+  ],
+  "exclude": ["dist"]
 }

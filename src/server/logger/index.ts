@@ -1,10 +1,10 @@
 import './axiosLogging.js';
 import { fileURLToPath } from 'node:url';
+import { pino } from 'pino';
 import { SHARE_ENV, Worker } from 'node:worker_threads';
 import cookie from 'cookie';
 import koaLogger from './koaLogger.js';
 import path from 'node:path';
-import { pino } from 'pino';
 import serializers from 'pino-std-serializers';
 
 const createWriteOptions = () => {

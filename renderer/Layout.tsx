@@ -1,7 +1,8 @@
 import '@mantine/core/styles.css';
+import { type FC, StrictMode } from 'react';
 import { MantineProvider } from '@mantine/core';
 import { theme } from './theme.js';
-import { StrictMode, type FC } from 'react';
+import { ThemeSwitcher } from '#/components/ThemeSwitcher.js';
 
 interface Props {
   children: React.ReactNode;
@@ -10,7 +11,10 @@ interface Props {
 export const Layout: FC<Props> = (props) => {
   return (
     <StrictMode>
-      <MantineProvider theme={theme}>{props.children}</MantineProvider>
+      <MantineProvider theme={theme}>
+        {props.children}
+        <ThemeSwitcher />
+      </MantineProvider>
     </StrictMode>
   );
 };

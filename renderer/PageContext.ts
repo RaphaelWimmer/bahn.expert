@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-namespace */
 // https://vike.dev/pageContext#typescript
 declare global {
   namespace Vike {
