@@ -14,7 +14,7 @@
     "sourceMap": false,
     "strict": true,
     "target": "esnext",
-    "types": ["jest", "vite/client"],
+    "types": ["vite/client"],
     "resolveJsonModule": true,
     "emitDecoratorMetadata": false,
     "paths": {

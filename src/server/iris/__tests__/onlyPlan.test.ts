@@ -1,25 +1,26 @@
 /* eslint-disable unicorn/prefer-module */
 /* eslint no-sync: 0 */
 import {
+  mockAllStations,
   mockFchg,
-  mockLageplan,
   mockSearch,
 } from '#/server/__tests__/mockHelper.js';
 import { Timetable } from '#/server/iris/Timetable.js';
 import fs from 'node:fs';
 import path from 'node:path';
+import { describe, beforeAll, afterAll, it, expect, vi } from 'vitest';
 
-jest.mock('#/server/cache.js');
+vi.mock('#/server/cache.js');
 
 describe('onlyPlan', () => {
   beforeAll(() => {
-    jest.useFakeTimers({
-      advanceTimers: true,
+    vi.useFakeTimers({
+      shouldAdvanceTime: true,
       now: 1552824000000,
     });
   });
   afterAll(() => {
-    jest.useRealTimers();
+    vi.useRealTimers();
   });
   const baseFixturePath = '__fixtures__/plan';
   const fixtures = fs.readdirSync(path.resolve(__dirname, baseFixturePath));
@@ -31,9 +32,9 @@ describe('onlyPlan', () => {
         'utf8',
       );
 
-      mockLageplan();
       mockFchg();
-      mockSearch(3, ['', inXml]);
+      mockSearch(4, ['', inXml]);
+      mockAllStations();
       const timetable = new Timetable('test', 'test', {
         lookahead: 120,
         lookbehind: 60,

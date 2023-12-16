@@ -4,6 +4,7 @@ import type {
   RouteValidArrivalStop,
   RouteValidDepartureStop,
 } from '#/types/HAFAS/JourneyDetails.js';
+import { describe, it, expect } from 'vitest';
 
 describe('createCtxRecon', () => {
   const expectedDeparture = '201912131045';

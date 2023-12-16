@@ -18,6 +18,29 @@ jobs:
         with:
           fetch-depth: 0
       - uses: wagoid/commitlint-github-action@v5
+  node:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js 21
+        uses: actions/setup-node@v3
+        with:
+          node-version: 21
+      - name: install
+        run: |
+          corepack enable
+          pnpm i --frozen-lockfile
+        env:
+          CYPRESS_INSTALL_BINARY: 0
+      - name: types
+        run: |
+          pnpm test:ts
+      - name: jest
+        run: |
+          pnpm test:node
+      - name: lint
+        run: |
+          pnpm lint
   docker:
     runs-on: ubuntu-latest
     steps:
@@ -37,6 +60,7 @@ jobs:
     runs-on: ubuntu-latest
     needs:
       - docker
+      - node
     steps:
       - name: 'Create Deployment'
         uses: avakar/create-deployment@v1.0.2

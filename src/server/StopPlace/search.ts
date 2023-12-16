@@ -40,11 +40,12 @@ const stopPlaceGroupCache = new Cache<ResolvedStopPlaceGroups>(
 function mapToGroupedStopPlace(
   stopPlace: Pick<
     StopPlaceSearchResult,
-    'evaNumber' | 'names' | 'availableTransports' | 'position'
+    'evaNumber' | 'names' | 'availableTransports' | 'position' | 'stationID'
   >,
 ): GroupedStopPlace {
   return {
     evaNumber: stopPlace.evaNumber,
+    stationId: stopPlace.stationID,
     name: stopPlace.names.DE.nameLong,
     availableTransports: stopPlace.availableTransports,
     position: stopPlace.position,
@@ -223,7 +224,6 @@ async function addIdentifiers(stopPlaces: GroupedStopPlace[]): Promise<void> {
         stopPlace.alternativeRil100 = identifier.alternativeRil100;
         stopPlace.ifopt = identifier.ifopt;
         stopPlace.ril100 = identifier.ril100;
-        stopPlace.stationId = identifier.stationId;
         stopPlace.uic = identifier.uic;
       }
     }),

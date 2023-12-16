@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`onlyPlan arrivalCancelled.xml 1`] = `
+exports[`onlyPlan > arrivalCancelled.xml 1`] = `
 {
   "departures": [
     {
@@ -182,7 +182,7 @@ exports[`onlyPlan arrivalCancelled.xml 1`] = `
 }
 `;
 
-exports[`onlyPlan arrivalWing.xml 1`] = `
+exports[`onlyPlan > arrivalWing.xml 1`] = `
 {
   "departures": [
     {
@@ -379,7 +379,7 @@ exports[`onlyPlan arrivalWing.xml 1`] = `
 }
 `;
 
-exports[`onlyPlan cancelled.xml 1`] = `
+exports[`onlyPlan > cancelled.xml 1`] = `
 {
   "departures": [
     {
@@ -561,7 +561,7 @@ exports[`onlyPlan cancelled.xml 1`] = `
 }
 `;
 
-exports[`onlyPlan departureCancelled.xml 1`] = `
+exports[`onlyPlan > departureCancelled.xml 1`] = `
 {
   "departures": [
     {
@@ -743,7 +743,7 @@ exports[`onlyPlan departureCancelled.xml 1`] = `
 }
 `;
 
-exports[`onlyPlan departureWing.xml 1`] = `
+exports[`onlyPlan > departureWing.xml 1`] = `
 {
   "departures": [
     {
@@ -933,7 +933,7 @@ exports[`onlyPlan departureWing.xml 1`] = `
 }
 `;
 
-exports[`onlyPlan filteredDueToTime.xml 1`] = `
+exports[`onlyPlan > filteredDueToTime.xml 1`] = `
 {
   "departures": [],
   "lookbehind": [],
@@ -944,7 +944,7 @@ exports[`onlyPlan filteredDueToTime.xml 1`] = `
 }
 `;
 
-exports[`onlyPlan lookbehind.xml 1`] = `
+exports[`onlyPlan > lookbehind.xml 1`] = `
 {
   "departures": [
     {
@@ -1038,7 +1038,7 @@ exports[`onlyPlan lookbehind.xml 1`] = `
 }
 `;
 
-exports[`onlyPlan multipleWings.xml 1`] = `
+exports[`onlyPlan > multipleWings.xml 1`] = `
 {
   "departures": [
     {
@@ -1303,7 +1303,7 @@ exports[`onlyPlan multipleWings.xml 1`] = `
 }
 `;
 
-exports[`onlyPlan onlyArrival.xml 1`] = `
+exports[`onlyPlan > onlyArrival.xml 1`] = `
 {
   "departures": [
     {
@@ -1393,7 +1393,7 @@ exports[`onlyPlan onlyArrival.xml 1`] = `
 }
 `;
 
-exports[`onlyPlan onlyDeparture.xml 1`] = `
+exports[`onlyPlan > onlyDeparture.xml 1`] = `
 {
   "departures": [
     {
@@ -1495,7 +1495,7 @@ exports[`onlyPlan onlyDeparture.xml 1`] = `
 }
 `;
 
-exports[`onlyPlan simple1.xml 1`] = `
+exports[`onlyPlan > simple1.xml 1`] = `
 {
   "departures": [
     {
@@ -1677,7 +1677,7 @@ exports[`onlyPlan simple1.xml 1`] = `
 }
 `;
 
-exports[`onlyPlan simple2.xml 1`] = `
+exports[`onlyPlan > simple2.xml 1`] = `
 {
   "departures": [
     {
@@ -1771,7 +1771,7 @@ exports[`onlyPlan simple2.xml 1`] = `
 }
 `;
 
-exports[`onlyPlan visibleDueToDelay.xml 1`] = `
+exports[`onlyPlan > visibleDueToDelay.xml 1`] = `
 {
   "departures": [],
   "lookbehind": [],
@@ -1782,7 +1782,7 @@ exports[`onlyPlan visibleDueToDelay.xml 1`] = `
 }
 `;
 
-exports[`onlyPlan wings.xml 1`] = `
+exports[`onlyPlan > wings.xml 1`] = `
 {
   "departures": [
     {

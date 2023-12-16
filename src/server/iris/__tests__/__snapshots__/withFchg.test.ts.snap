@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`withFchg arrivalCancelled.xml 1`] = `
+exports[`withFchg > arrivalCancelled.xml 1`] = `
 {
   "departures": [
     {
@@ -185,7 +185,7 @@ exports[`withFchg arrivalCancelled.xml 1`] = `
 }
 `;
 
-exports[`withFchg arrivalWing.xml 1`] = `
+exports[`withFchg > arrivalWing.xml 1`] = `
 {
   "departures": [
     {
@@ -392,7 +392,7 @@ exports[`withFchg arrivalWing.xml 1`] = `
 }
 `;
 
-exports[`withFchg cancelled.xml 1`] = `
+exports[`withFchg > cancelled.xml 1`] = `
 {
   "departures": [
     {
@@ -601,7 +601,7 @@ exports[`withFchg cancelled.xml 1`] = `
 }
 `;
 
-exports[`withFchg departureCancelled.xml 1`] = `
+exports[`withFchg > departureCancelled.xml 1`] = `
 {
   "departures": [
     {
@@ -808,7 +808,7 @@ exports[`withFchg departureCancelled.xml 1`] = `
 }
 `;
 
-exports[`withFchg departureWing.xml 1`] = `
+exports[`withFchg > departureWing.xml 1`] = `
 {
   "departures": [
     {
@@ -1008,7 +1008,7 @@ exports[`withFchg departureWing.xml 1`] = `
 }
 `;
 
-exports[`withFchg filteredDueToTime.xml 1`] = `
+exports[`withFchg > filteredDueToTime.xml 1`] = `
 {
   "departures": [],
   "lookbehind": [],
@@ -1019,7 +1019,7 @@ exports[`withFchg filteredDueToTime.xml 1`] = `
 }
 `;
 
-exports[`withFchg lookbehind.xml 1`] = `
+exports[`withFchg > lookbehind.xml 1`] = `
 {
   "departures": [
     {
@@ -1141,7 +1141,7 @@ exports[`withFchg lookbehind.xml 1`] = `
 }
 `;
 
-exports[`withFchg multipleWings.xml 1`] = `
+exports[`withFchg > multipleWings.xml 1`] = `
 {
   "departures": [
     {
@@ -1494,7 +1494,7 @@ exports[`withFchg multipleWings.xml 1`] = `
 }
 `;
 
-exports[`withFchg onlyArrival.xml 1`] = `
+exports[`withFchg > onlyArrival.xml 1`] = `
 {
   "departures": [
     {
@@ -1587,7 +1587,7 @@ exports[`withFchg onlyArrival.xml 1`] = `
 }
 `;
 
-exports[`withFchg onlyDeparture.xml 1`] = `
+exports[`withFchg > onlyDeparture.xml 1`] = `
 {
   "departures": [
     {
@@ -1692,7 +1692,7 @@ exports[`withFchg onlyDeparture.xml 1`] = `
 }
 `;
 
-exports[`withFchg simple1.xml 1`] = `
+exports[`withFchg > simple1.xml 1`] = `
 {
   "departures": [
     {
@@ -1874,7 +1874,7 @@ exports[`withFchg simple1.xml 1`] = `
 }
 `;
 
-exports[`withFchg simple2.xml 1`] = `
+exports[`withFchg > simple2.xml 1`] = `
 {
   "departures": [
     {
@@ -1996,7 +1996,7 @@ exports[`withFchg simple2.xml 1`] = `
 }
 `;
 
-exports[`withFchg visibleDueToDelay.xml 1`] = `
+exports[`withFchg > visibleDueToDelay.xml 1`] = `
 {
   "departures": [
     {
@@ -2183,7 +2183,7 @@ exports[`withFchg visibleDueToDelay.xml 1`] = `
 }
 `;
 
-exports[`withFchg wings.xml 1`] = `
+exports[`withFchg > wings.xml 1`] = `
 {
   "departures": [
     {

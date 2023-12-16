@@ -36,6 +36,7 @@ noncdRequest.interceptors.request.use(
 export async function irisGetRequest<T>(url: string): Promise<T> {
   try {
     const result = (await noncdRequest.get<T>(url)).data;
+    console.log(result);
     return result;
   } catch (error) {
     if (

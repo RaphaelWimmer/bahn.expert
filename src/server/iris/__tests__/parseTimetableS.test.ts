@@ -5,6 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import xmljs from 'libxmljs2';
 import type { Element } from 'libxmljs2';
+import { describe, it, expect } from 'vitest';
 
 describe('parseTimetableS', () => {
   const baseFixturePath = '__fixtures__/plan';

@@ -1,4 +1,5 @@
 import { partition } from '#/util/index.js';
+import { describe, it, expect } from 'vitest';
 
 describe('partition', () => {
   it('smaller than partitionSize', () => {

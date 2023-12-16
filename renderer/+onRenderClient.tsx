@@ -1,10 +1,10 @@
 import { hydrateRoot } from 'react-dom/client';
 import { Layout } from './Layout.js';
-import type { PageContextClient } from './types.js';
+import { OnRenderClientSync } from 'vike/types';
 
 // This render() hook only supports SSR, see https://vike.dev/render-modes for how to modify render() to support SPA
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types, @typescript-eslint/require-await
-async function render(pageContext: PageContextClient) {
+export const onRenderClient: OnRenderClientSync = (pageContext) => {
   const { Page, pageProps } = pageContext;
   if (!Page)
     throw new Error(
@@ -18,9 +18,4 @@ async function render(pageContext: PageContextClient) {
       <Page {...pageProps} />
     </Layout>,
   );
-}
-
-export default render;
-
-/* To enable Client-side Routing:
-// !! WARNING !! Before doing so, read https://vike.dev/clientRouting */
+};

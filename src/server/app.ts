@@ -52,7 +52,11 @@ export async function createApp(): Promise<Koa> {
   // @ts-expect-error ???
   app.use(hotHelper(() => apiRoutes.routes()));
   app.use(async (ctx, next) => {
-    const pageContextInit = { urlOriginal: ctx.originalUrl };
+    const pageContextInit = {
+      urlOriginal: ctx.originalUrl,
+      userAgent: ctx.headers['user-agent'],
+      rawBaseUrl: process.env.BASE_URL || 'localhost:9042',
+    };
     // eslint-disable-next-line testing-library/render-result-naming-convention
     const pageContext = await renderPage(pageContextInit);
     const { httpResponse } = pageContext;
@@ -64,7 +68,9 @@ export async function createApp(): Promise<Koa> {
       ctx.headers[name] = value;
     }
     ctx.status = httpResponse.statusCode;
-    ctx.body = httpResponse.body;
+
+    ctx.respond = false;
+    httpResponse.pipe(ctx.res);
   });
 
   return app;

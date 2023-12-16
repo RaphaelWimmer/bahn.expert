@@ -1,4 +1,5 @@
 import { Cache, parseCacheTTL } from '#/server/cache.js';
+import { afterAll, expect, it, describe } from 'vitest';
 
 const defineCacheTests = (createCache: () => Cache<unknown>) => {
   const cache: Cache<unknown> = createCache();

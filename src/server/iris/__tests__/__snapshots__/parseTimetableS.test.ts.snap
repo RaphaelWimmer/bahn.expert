@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`parseTimetableS arrivalCancelled.xml 1`] = `
+exports[`parseTimetableS > arrivalCancelled.xml 1`] = `
 {
   "additional": undefined,
   "arrival": {
@@ -198,7 +198,7 @@ exports[`parseTimetableS arrivalCancelled.xml 1`] = `
 }
 `;
 
-exports[`parseTimetableS arrivalWing.xml 1`] = `
+exports[`parseTimetableS > arrivalWing.xml 1`] = `
 {
   "additional": undefined,
   "arrival": {
@@ -302,7 +302,7 @@ exports[`parseTimetableS arrivalWing.xml 1`] = `
 }
 `;
 
-exports[`parseTimetableS arrivalWing.xml 2`] = `
+exports[`parseTimetableS > arrivalWing.xml 2`] = `
 {
   "additional": undefined,
   "arrival": {
@@ -392,7 +392,7 @@ exports[`parseTimetableS arrivalWing.xml 2`] = `
 }
 `;
 
-exports[`parseTimetableS cancelled.xml 1`] = `
+exports[`parseTimetableS > cancelled.xml 1`] = `
 {
   "additional": undefined,
   "arrival": {
@@ -590,7 +590,7 @@ exports[`parseTimetableS cancelled.xml 1`] = `
 }
 `;
 
-exports[`parseTimetableS departureCancelled.xml 1`] = `
+exports[`parseTimetableS > departureCancelled.xml 1`] = `
 {
   "additional": undefined,
   "arrival": {
@@ -788,7 +788,7 @@ exports[`parseTimetableS departureCancelled.xml 1`] = `
 }
 `;
 
-exports[`parseTimetableS departureWing.xml 1`] = `
+exports[`parseTimetableS > departureWing.xml 1`] = `
 {
   "additional": undefined,
   "arrival": {
@@ -884,7 +884,7 @@ exports[`parseTimetableS departureWing.xml 1`] = `
 }
 `;
 
-exports[`parseTimetableS departureWing.xml 2`] = `
+exports[`parseTimetableS > departureWing.xml 2`] = `
 {
   "additional": undefined,
   "arrival": {
@@ -966,7 +966,7 @@ exports[`parseTimetableS departureWing.xml 2`] = `
 }
 `;
 
-exports[`parseTimetableS filteredDueToTime.xml 1`] = `
+exports[`parseTimetableS > filteredDueToTime.xml 1`] = `
 {
   "additional": undefined,
   "arrival": {
@@ -1164,7 +1164,7 @@ exports[`parseTimetableS filteredDueToTime.xml 1`] = `
 }
 `;
 
-exports[`parseTimetableS lookbehind.xml 1`] = `
+exports[`parseTimetableS > lookbehind.xml 1`] = `
 {
   "additional": undefined,
   "arrival": {
@@ -1246,7 +1246,7 @@ exports[`parseTimetableS lookbehind.xml 1`] = `
 }
 `;
 
-exports[`parseTimetableS multipleWings.xml 1`] = `
+exports[`parseTimetableS > multipleWings.xml 1`] = `
 {
   "additional": undefined,
   "arrival": undefined,
@@ -1342,7 +1342,7 @@ exports[`parseTimetableS multipleWings.xml 1`] = `
 }
 `;
 
-exports[`parseTimetableS multipleWings.xml 2`] = `
+exports[`parseTimetableS > multipleWings.xml 2`] = `
 {
   "additional": undefined,
   "arrival": undefined,
@@ -1419,7 +1419,7 @@ exports[`parseTimetableS multipleWings.xml 2`] = `
 }
 `;
 
-exports[`parseTimetableS multipleWings.xml 3`] = `
+exports[`parseTimetableS > multipleWings.xml 3`] = `
 {
   "additional": undefined,
   "arrival": undefined,
@@ -1500,7 +1500,7 @@ exports[`parseTimetableS multipleWings.xml 3`] = `
 }
 `;
 
-exports[`parseTimetableS onlyArrival.xml 1`] = `
+exports[`parseTimetableS > onlyArrival.xml 1`] = `
 {
   "additional": undefined,
   "arrival": {
@@ -1581,7 +1581,7 @@ exports[`parseTimetableS onlyArrival.xml 1`] = `
 }
 `;
 
-exports[`parseTimetableS onlyDeparture.xml 1`] = `
+exports[`parseTimetableS > onlyDeparture.xml 1`] = `
 {
   "additional": undefined,
   "arrival": undefined,
@@ -1674,7 +1674,7 @@ exports[`parseTimetableS onlyDeparture.xml 1`] = `
 }
 `;
 
-exports[`parseTimetableS simple1.xml 1`] = `
+exports[`parseTimetableS > simple1.xml 1`] = `
 {
   "additional": undefined,
   "arrival": {
@@ -1872,7 +1872,7 @@ exports[`parseTimetableS simple1.xml 1`] = `
 }
 `;
 
-exports[`parseTimetableS simple2.xml 1`] = `
+exports[`parseTimetableS > simple2.xml 1`] = `
 {
   "additional": undefined,
   "arrival": {
@@ -1954,7 +1954,7 @@ exports[`parseTimetableS simple2.xml 1`] = `
 }
 `;
 
-exports[`parseTimetableS visibleDueToDelay.xml 1`] = `
+exports[`parseTimetableS > visibleDueToDelay.xml 1`] = `
 {
   "additional": undefined,
   "arrival": {
@@ -2152,7 +2152,7 @@ exports[`parseTimetableS visibleDueToDelay.xml 1`] = `
 }
 `;
 
-exports[`parseTimetableS wings.xml 1`] = `
+exports[`parseTimetableS > wings.xml 1`] = `
 {
   "additional": undefined,
   "arrival": {

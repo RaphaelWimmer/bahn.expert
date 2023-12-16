@@ -1,4 +1,5 @@
 import { uniqBy } from '#/util/index.js';
+import { describe, it, expect } from 'vitest';
 
 describe('uniqBy', () => {
   it('All elements Unique', () => {

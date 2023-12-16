@@ -1,6 +1,7 @@
 /* eslint-disable unicorn/prefer-module */
 import { disconnectRedis } from '#/server/cache.js';
-import Nock from 'nock';
+import { expect, beforeAll, afterAll, afterEach } from 'vitest';
+import { setupServer } from 'msw/node';
 
 expect(new Date().getTimezoneOffset()).toBe(0);
 
@@ -21,11 +22,13 @@ globalThis.parseJson = (json: string) => {
 };
 
 beforeAll(() => {
-  Nock.disableNetConnect();
-  Nock.enableNetConnect(/127\.0\.0\.1/);
+  globalThis.mockServer = setupServer();
+  globalThis.mockServer.listen({ onUnhandledRequest: 'error' });
 });
 
 afterAll(() => {
-  Nock.restore();
+  globalThis.mockServer.close();
   disconnectRedis();
 });
+
+afterEach(() => globalThis.mockServer.resetHandlers());

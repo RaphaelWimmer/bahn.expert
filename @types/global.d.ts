@@ -1,12 +1,12 @@
 /* eslint-disable no-var */
-import type nock from 'nock';
+import type { SetupServer } from 'msw/node';
 
 declare global {
   declare namespace globalThis {
     declare var BASE_URL: string;
 
     // test only
-    declare var nock: nock.Scope;
+    declare var mockServer: SetupServer;
     declare var parseJson: <T = unknown>(json: string) => T;
   }
 
