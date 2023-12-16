@@ -1,7 +1,6 @@
 import { dangerouslySkipEscape, escapeInject } from 'vike/server';
 import { Layout } from './Layout.js';
 import { ColorSchemeScript as MantineColorSchemeScript } from '@mantine/core';
-import logoUrl from './logo.svg';
 import ReactDOMServer from 'react-dom/server';
 import type { PageContextServer } from './types.js';
 
@@ -25,14 +24,13 @@ async function render(pageContext: PageContextServer) {
 
   // See https://vike.dev/head
   const { documentProps } = pageContext.exports;
-  const title = documentProps?.title || 'Vite SSR app';
-  const desc = documentProps?.description || 'App using Vite + Vike';
+  const title = documentProps?.title || 'Next bahn.expert';
+  const desc = documentProps?.description || 'Next Gen bahn.expert';
 
   const documentHtml = escapeInject`<!DOCTYPE html>
     <html lang="en">
       <head>
         <meta charset="UTF-8" />
-        <link rel="icon" href="${logoUrl}" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="${desc}" />
         <title>${title}</title>
