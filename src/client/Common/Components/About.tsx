@@ -57,7 +57,7 @@ export const About: FC = () => {
 				<span>
 					Diese Seite hat keinen Zusammenhang mit der Deutschen Bahn oder einem
 					anderen Verkehrsunternehmen. Es ist das Privatprojekt von mir und
-					spiegel niemals Meinungen der Deutschen Bahn oder anderen
+					spiegelt niemals Meinungen der Deutschen Bahn oder anderen
 					Verkehrsunternehmen wieder. Alles was hier steht ist ohne Gewähr, wird
 					aber so gut ich kann gepflegt.
 				</span>
@@ -83,9 +83,9 @@ export const About: FC = () => {
 					</a>
 				</span>
 				<span>
-					Wer mich anderweitig kontaktieren möchte kann dies neben dem
+					Wer mich anderweitig kontaktieren möchte, kann dies neben dem
 					verlinkten Social Media Profil auch per mail an info (at) bahn (dot)
-					expert. Bitte als Anrede nicht siezen. Im Idealfall einfach "marudor"
+					expert tun. Bitte als Anrede nicht siezen. Im Idealfall einfach "marudor"
 					nutzen.
 				</span>
 				<Privacy />
